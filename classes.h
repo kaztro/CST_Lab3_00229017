@@ -1,6 +1,10 @@
+/*
+No soy el propietario de este codigo pero he hecho modificaciones para adaptarlo a lo requerido en la tarea...
+El codigo original le pertenece a Sortweste: https://github.com/Sortweste/-TSC-Laboratorio3
+*/
 enum lines {NOLINE,SINGLELINE,DOUBLELINE};
 enum modes {NOMODE,INT_FLOAT,INT_INT_INT};
-enum parameters {THERMAL_CONDUCTIVITY,HEAT_SOURCE};
+enum parameters {E_PARAM, A_PARAM, F_PARAM};
 enum sizes {NODES,ELEMENTS,DIRICHLET,NEUMANN};
 
 class item{
@@ -9,7 +13,7 @@ class item{
         int id;
         float x;
         int node1;
-        int node2;
+        int node2;  
         float value;
         
     public:
@@ -77,16 +81,17 @@ class condition: public item{
 };
 
 class mesh{
-        float parameters[2];
+        float parameters[3];
         int sizes[4]; 
         node *node_list;
         element *element_list;
         condition *dirichlet_list;
         condition *neumann_list;
     public:
-        void setParameters(float k,float Q){
-            parameters[THERMAL_CONDUCTIVITY]=k;
-            parameters[HEAT_SOURCE]=Q;
+        void setParameters(float E,float A, float F){
+            parameters[A_PARAM] = A;
+            parameters[E_PARAM] = E;
+            parameters[F_PARAM] = F;
         }
         void setSizes(int nnodes,int neltos,int ndirich,int nneu){
             sizes[NODES] = nnodes;

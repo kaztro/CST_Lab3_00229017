@@ -1,3 +1,7 @@
+/*
+No soy el propietario de este codigo pero he hecho modificaciones para adaptarlo a lo requerido en la tarea...
+El codigo original le pertenece a Sortweste: https://github.com/Sortweste/-TSC-Laboratorio3
+*/
 #include <iostream>
 #include "math_tools.h"
 #include "classes.h"
@@ -15,7 +19,7 @@ int main(){
     Vector T;
 
     cout << "IMPLEMENTACI"<<char(224)<<"N DEL M"<<char(144)<<"TODO DE LOS ELEMENTOS FINITOS\n"
-         << "\t- TRANSFERENCIA DE CALOR\n" << "\t- 1 DIMENSI"<<char(224)<<"N\n"
+         << "\t- Evaluacion 3\n" << "\t- 1 DIMENSI"<<char(224)<<"N\n"
          << "\t- FUNCIONES DE FORMA LINEALES\n" << "\t- PESOS DE GALERKIN\n"
          << "*********************************************************************************\n\n";
 
